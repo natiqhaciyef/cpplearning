@@ -1,9 +1,10 @@
 #include <iostream>
-#import "basics/Variables.cpp"
-
+#include "basics/Variables.h"
+#include "basics/Operators.h"
 using namespace std;
 
-int main(){
+
+int main() {
 
     return 0;
 }

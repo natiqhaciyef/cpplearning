@@ -1,10 +1,8 @@
-//
-// Created by Natiq Haciyev on 09.08.23.
-//
-
 #include <iostream>
-
 using namespace std;
+
+#ifndef CPPLEARNING_VARIABLES_H
+#define CPPLEARNING_VARIABLES_H
 
 void variables() {
     // primitive variables
@@ -29,3 +27,5 @@ void variables() {
     // print function
     cout << "Hello C++";
 }
+
+#endif //CPPLEARNING_VARIABLES_H
