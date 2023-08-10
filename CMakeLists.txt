@@ -9,4 +9,5 @@ add_executable(cpplearning main.cpp
         basics/StringFunctions.h
         basics/Mathematics.h
         basics/Conditions.h
+        basics/Loops.h
 )

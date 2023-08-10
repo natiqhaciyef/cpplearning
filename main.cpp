@@ -4,13 +4,13 @@
 #include "basics/StringFunctions.h"
 #include "basics/Mathematics.h"
 #include "basics/Conditions.h"
+#include "basics/Loops.h"
 using namespace std;
 
 
 int main() {
-//    conditionsUsageWithIfElse();
-//    conditionsUsageWithSwitchCase();
-//    conditionsUsageTernary();
+//    loopsUsageFor();
+    loopsUsageDoWhile();
     return 0;
 }
 
