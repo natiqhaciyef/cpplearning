@@ -8,4 +8,5 @@ add_executable(cpplearning main.cpp
         basics/Operators.h
         basics/StringFunctions.h
         basics/Mathematics.h
+        basics/Conditions.h
 )

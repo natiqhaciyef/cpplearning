@@ -3,11 +3,14 @@
 #include "basics/Operators.h"
 #include "basics/StringFunctions.h"
 #include "basics/Mathematics.h"
+#include "basics/Conditions.h"
 using namespace std;
 
 
 int main() {
-    mathFunctionsUsage();
+//    conditionsUsageWithIfElse();
+//    conditionsUsageWithSwitchCase();
+//    conditionsUsageTernary();
     return 0;
 }
 
