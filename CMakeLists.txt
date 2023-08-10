@@ -7,4 +7,5 @@ add_executable(cpplearning main.cpp
         basics/Variables.h
         basics/Operators.h
         basics/StringFunctions.h
+        basics/Mathematics.h
 )
