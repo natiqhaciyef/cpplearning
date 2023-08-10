@@ -5,12 +5,15 @@
 #include "basics/Mathematics.h"
 #include "basics/Conditions.h"
 #include "basics/Loops.h"
+
 using namespace std;
 
 
 int main() {
 //    loopsUsageFor();
-    loopsUsageDoWhile();
+//    loopsUsageWhile();
+//    loopsUsageDoWhile();
+    loopsUsageWhileBreakAndContinue();
     return 0;
 }
 
