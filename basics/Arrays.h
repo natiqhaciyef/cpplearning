@@ -26,6 +26,7 @@ void arrayUsage() {
     for (const auto & car : cars) {
         cout << car << endl;
     }
+
 }
 
 #endif //CPPLEARNING_ARRAYS_H
