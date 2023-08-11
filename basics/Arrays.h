@@ -18,15 +18,28 @@ void arrayUsage() {
     }
 
     // array with for-each
-    for (string element :cars){
+    for (string element: cars) {
         cout << element << endl;
     }
 
     // modern way with for (increase memory performance)
-    for (const auto & car : cars) {
+    for (const auto &car: cars) {
         cout << car << endl;
     }
+}
 
+void multiDimensionalArraysUsage() {
+    int numberMatrix[3][3] = {
+            {1, 2, 3},
+            {2, 3, 1},
+            {3, 2, 1}
+    };
+
+    int columnCount = sizeof(numberMatrix) / sizeof(numberMatrix[0]);
+    int rowsCount = sizeof(numberMatrix[0]) / sizeof(numberMatrix[0][0]);
+
+    cout << numberMatrix[2][1] << endl;
+    cout << "Size of multidimensional array: " << columnCount * rowsCount << endl;
 }
 
 #endif //CPPLEARNING_ARRAYS_H
