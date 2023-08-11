@@ -5,15 +5,13 @@
 #include "basics/Mathematics.h"
 #include "basics/Conditions.h"
 #include "basics/Loops.h"
+#include "basics/Arrays.h"
 
 using namespace std;
 
 
 int main() {
-//    loopsUsageFor();
-//    loopsUsageWhile();
-//    loopsUsageDoWhile();
-    loopsUsageWhileBreakAndContinue();
+    arrayUsage();
     return 0;
 }
 

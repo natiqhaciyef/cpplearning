@@ -10,4 +10,5 @@ add_executable(cpplearning main.cpp
         basics/Mathematics.h
         basics/Conditions.h
         basics/Loops.h
+        basics/Arrays.h
 )
