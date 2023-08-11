@@ -11,4 +11,5 @@ add_executable(cpplearning main.cpp
         basics/Conditions.h
         basics/Loops.h
         basics/Arrays.h
+        basics/Structures.h
 )
