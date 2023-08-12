@@ -13,7 +13,8 @@ using namespace std;
 
 
 int main() {
-    pointersUsage();
+    pointerUsage();
+//    referencesUsage();
     return 0;
 }
 

@@ -6,7 +6,7 @@ using namespace std;
 #ifndef CPPLEARNING_POINTERS_H
 #define CPPLEARNING_POINTERS_H
 
-void pointersUsage(){
+[[maybe_unused]] void referencesUsage(){
     string brand = "Nike";
     string &info = brand;
     string copyInfo = brand;
@@ -21,6 +21,28 @@ void pointersUsage(){
 
     cout << "Memory address" << endl;
     cout << &brand;
+}
+
+void pointerUsage(){
+    string country = "Canada";
+
+    // pointer
+    string* countryPointer = &country;
+
+    // it returns address
+    cout << countryPointer << endl;
+
+    // un - pointed variable
+    string countryDoublePointer = *countryPointer;
+
+    // it returns string from copy
+    cout << countryDoublePointer << endl;
+
+    country = "Italy";
+
+    // it returns string from address
+    cout << *countryPointer << endl;
+
 }
 
 #endif //CPPLEARNING_POINTERS_H
