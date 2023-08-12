@@ -6,18 +6,14 @@
 #include "basics/Conditions.h"
 #include "basics/Loops.h"
 #include "basics/Arrays.h"
-
 #include "basics/Structures.h"
+#include "basics/Pointers.h"
 
 using namespace std;
 
 
 int main() {
-    // also can change from there
-    usefulData.fullname = "Private call";
-    structCallAndUsage();
-
-
+    pointersUsage();
     return 0;
 }
 

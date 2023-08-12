@@ -12,4 +12,5 @@ add_executable(cpplearning main.cpp
         basics/Loops.h
         basics/Arrays.h
         basics/Structures.h
+        basics/Pointers.h
 )
