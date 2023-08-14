@@ -6,7 +6,7 @@ using namespace std;
 #ifndef CPPLEARNING_POINTERS_H
 #define CPPLEARNING_POINTERS_H
 
-[[maybe_unused]] void referencesUsage(){
+void referencesUsage(){
     string brand = "Nike";
     string &info = brand;
     string copyInfo = brand;
@@ -42,7 +42,12 @@ void pointerUsage(){
 
     // it returns string from address
     cout << *countryPointer << endl;
-
 }
+
+// &data = any ;  -> data takes any's address value (copy value with address)
+// &any -> returns address of any value
+// *location = &any ; -> stores any's address in location
+// *location -> when print this returns data from location
+
 
 #endif //CPPLEARNING_POINTERS_H

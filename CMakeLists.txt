@@ -13,4 +13,5 @@ add_executable(cpplearning main.cpp
         basics/Arrays.h
         basics/Structures.h
         basics/Pointers.h
+        basics/Functions.h
 )
