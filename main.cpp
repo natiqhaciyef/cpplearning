@@ -9,20 +9,21 @@
 #include "basics/Structures.h"
 #include "basics/Pointers.h"
 #include "basics/Functions.h"
+#include "oop/UserClass.h"
 
 using namespace std;
 
 
 int main() {
-    string greeting = withParameterReturnableFunction("Natiq");
-    cout << greeting << endl;
-    string greetingDefault = withParameterReturnableFunctionWithDefaultParameter();
-    cout << greetingDefault << endl;
+    UserClass user ;
+    user.name = "Natiq";
+    user.email = "natiq@gmail.com";
+    user.age = 21;
+    user.phone = "055 386 0054";
 
-    string name = "Natiq" ;
-    cout << referenceReturner("Natiq") << endl;
-    cout << referenceGetter(&name) << endl;
-    cout << referenceAddressConnectingWithParameter(name);
+    user.getInfo();
+    user.getDetailedInfo();
+
     return 0;
 }
 
