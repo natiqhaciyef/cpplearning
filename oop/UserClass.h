@@ -17,8 +17,19 @@ public :
     string email;
     string phone;
 
+    // constructor add
+    UserClass() {
+        cout << "Constructor running" << endl;
+    }
+
+    UserClass(string name, int age) {
+        cout << "Constructor running with Name: " << name << ", Age: " << age << endl;
+        this->name = name;
+        this->age = age;
+    }
+
 // inside creation
-    void getInfo(){
+    void getInfo() {
         cout << "Username: " << name << endl;
         cout << "Age: " << age << endl;
     }
@@ -28,7 +39,7 @@ public :
 };
 
 // outside creation
-void UserClass::getDetailedInfo(){
+void UserClass::getDetailedInfo() {
     cout << "Username: " << name << endl;
     cout << "Age: " << age << endl;
     cout << "Email: " << email << endl;
