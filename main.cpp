@@ -10,23 +10,19 @@
 #include "basics/Pointers.h"
 #include "basics/Functions.h"
 #include "oop/UserClass.h"
+#include "oop/AccessModifiers.h"
 
 using namespace std;
 
 
 int main() {
-    UserClass user ;
-//    user.name = "Natiq";
-//    user.email = "natiq@gmail.com";
-//    user.age = 21;
-//    user.phone = "055 386 0054";
+    int numbers [10] = {1,2,3,2,2,1,2,4,5,2};
+    Mathematics math = Mathematics(numbers);
 
-    UserClass user2 = UserClass("Natiq 2", 23);
-    cout << user2.email << endl;
-    cout << user2.name << endl;
-
-//    user.getInfo();
-//    user.getDetailedInfo();
+    cout << "Sum of numbers: " << math.sum() << endl;
+    cout << "Subtraction of numbers: " << math.subtract()<< endl;
+    cout << "Multiplication of numbers: " << math.multiple()<< endl;
+    cout << "Division of numbers: " << math.divide()<< endl;
 
     return 0;
 }
