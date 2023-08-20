@@ -16,4 +16,5 @@ add_executable(cpplearning main.cpp
         basics/Functions.h
         oop/UserClass.h
         oop/AccessModifiers.h
+        oop/Encapsulation.h
 )

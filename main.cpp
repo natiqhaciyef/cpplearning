@@ -11,18 +11,16 @@
 #include "basics/Functions.h"
 #include "oop/UserClass.h"
 #include "oop/AccessModifiers.h"
+#include "oop/Encapsulation.h"
 
 using namespace std;
-
+// tree frog
 
 int main() {
-    int numbers [10] = {1,2,3,2,2,1,2,4,5,2};
-    Mathematics math = Mathematics(numbers);
-
-    cout << "Sum of numbers: " << math.sum() << endl;
-    cout << "Subtraction of numbers: " << math.subtract()<< endl;
-    cout << "Multiplication of numbers: " << math.multiple()<< endl;
-    cout << "Division of numbers: " << math.divide()<< endl;
+    Cart cart = Cart();
+    cart.setUsername("Natiq");
+    cout << cart.getVerificationId() << endl;
+    cout << cart.getUsername() << endl;
 
     return 0;
 }
