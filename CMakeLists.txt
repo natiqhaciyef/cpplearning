@@ -16,5 +16,9 @@ add_executable(cpplearning main.cpp
         basics/Functions.h
         oop/UserClass.h
         oop/AccessModifiers.h
-        oop/Encapsulation.h
+        oop/encapsulation/Encapsulation.h
+        oop/inheritance/Vehicle.h
+        oop/inheritance/Car.h
+        oop/inheritance/Audi.h
+        oop/inheritance/Tesla.h
 )
