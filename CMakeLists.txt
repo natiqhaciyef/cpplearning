@@ -21,4 +21,7 @@ add_executable(cpplearning main.cpp
         oop/inheritance/Car.h
         oop/inheritance/Audi.h
         oop/inheritance/Tesla.h
+        oop/polymorphism/Animal.h
+        oop/polymorphism/Cat.h
+        oop/polymorphism/Dog.h
 )
