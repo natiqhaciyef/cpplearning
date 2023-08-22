@@ -24,4 +24,7 @@ add_executable(cpplearning main.cpp
         oop/polymorphism/Animal.h
         oop/polymorphism/Cat.h
         oop/polymorphism/Dog.h
+        oop/abstraction/Shape.h
+        oop/abstraction/Rectangle.h
+        oop/abstraction/Triangle.h
 )

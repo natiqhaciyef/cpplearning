@@ -17,20 +17,25 @@
 #include "oop/polymorphism/Dog.h"
 #include "oop/polymorphism/Cat.h"
 #include "oop/polymorphism/Animal.h"
+#include "oop/abstraction/Triangle.h"
+#include "oop/abstraction/Rectangle.h"
 
 using namespace std;
 // tree frog
 
 int main() {
-    Animal animal = Animal();
-    animal.getAnimalSound("Animal");
+    Triangle triangle = Triangle();
+    Rectangle rectangle = Rectangle();
 
-    Cat cat = Cat();
-    cat.getAnimalSound("Cat");
+    triangle.side1 = 12;
+    triangle.side2 = 5;
+    triangle.side3 = 13;
 
-    Dog dog = Dog();
-    dog.getAnimalSound("Dog");
+    rectangle.height = 10;
+    rectangle.width = 12;
 
+    cout << "Rectangle area " << rectangle.getShapeArea() << endl;
+    cout << "Triangle area " << triangle.getShapeArea() << endl;
 
     return 0;
 }
