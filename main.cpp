@@ -1,4 +1,7 @@
 #include <iostream>
+#include <fstream>
+#include <cstdio>
+
 #include "basics/Variables.h"
 #include "basics/Operators.h"
 #include "basics/StringFunctions.h"
@@ -24,18 +27,28 @@ using namespace std;
 // tree frog
 
 int main() {
-    Triangle triangle = Triangle();
-    Rectangle rectangle = Rectangle();
+    // Create or open a text file
+    ofstream MyFile("filename.txt");
 
-    triangle.side1 = 12;
-    triangle.side2 = 5;
-    triangle.side3 = 13;
+    // Write to the file
+    MyFile << "Files can be tricky, but it is fun enough";
 
-    rectangle.height = 10;
-    rectangle.width = 12;
+    // Close the file
+    MyFile.close();
 
-    cout << "Rectangle area " << rectangle.getShapeArea() << endl;
-    cout << "Triangle area " << triangle.getShapeArea() << endl;
+
+    string fileDescription;
+
+    // Read from the text file
+    ifstream MyReadFile("filename.txt");
+    while (getline(MyReadFile, fileDescription)){
+        cout << fileDescription;
+    }
+
+    // Remove file by name
+    MyReadFile.close();
+
+    remove("filename.txt");
 
     return 0;
 }
