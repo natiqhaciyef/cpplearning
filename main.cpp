@@ -22,33 +22,12 @@
 #include "oop/polymorphism/Animal.h"
 #include "oop/abstraction/Triangle.h"
 #include "oop/abstraction/Rectangle.h"
+#include "files/FileManagement.h"
 
 using namespace std;
 // tree frog
 
 int main() {
-    // Create or open a text file
-    ofstream MyFile("filename.txt");
-
-    // Write to the file
-    MyFile << "Files can be tricky, but it is fun enough";
-
-    // Close the file
-    MyFile.close();
-
-
-    string fileDescription;
-
-    // Read from the text file
-    ifstream MyReadFile("filename.txt");
-    while (getline(MyReadFile, fileDescription)){
-        cout << fileDescription;
-    }
-
-    // Remove file by name
-    MyReadFile.close();
-
-    remove("filename.txt");
 
     return 0;
 }
