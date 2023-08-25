@@ -1,4 +1,5 @@
 #include "iostream"
+#include "string"
 #include "fstream"
 #include "cstdio"
 #include "cmath"
@@ -10,19 +11,13 @@ using namespace std;
 
 class FileManagement {
 public:
-    char filename[];
+    string filename ;
 
-    FileManagement(char filename[]) {
-        int fileSize = sizeof(filename) / sizeof(filename[0]);
-        for (int i = 0; i < fileSize; ++i) {
-            this->filename[i] = filename[i];
-        }
+    FileManagement(string fn) {
+        string tempFileName = fn;
+        tempFileName += ".txt";
 
-        filename[fileSize] = '.';
-        filename[fileSize + 1] = 't';
-        filename[fileSize + 2] = 'x';
-        filename[fileSize + 3] = 't';
-
+        this -> filename = tempFileName;
     }
 
     void fileCreator(string description) {
@@ -48,10 +43,33 @@ public:
 
 
     void removeFile() {
-        remove(filename);
+        remove(filename.c_str());
     }
 
-    void createFileInSelectedDirectory(string directory){
+    void updateFile(string additionalData, string removeData) {
+        fstream myFile(filename, fstream::in | fstream::out);
+        if (!myFile.is_open()) {
+            cout << "File opening error occurred" << endl;
+        }
+
+        myFile.seekg(0, ios::beg);
+
+        string content;
+        getline(myFile, content);
+        content = "Updated: " + content + additionalData;
+
+        size_t pos = content.find(removeData);
+        if (pos == string::npos) {
+            content.replace(pos, removeData.length(), "");
+        }
+
+        myFile.seekp(0, ios::beg);
+        myFile << content;
+        myFile.close();
+    }
+
+
+    void createFileInSelectedDirectory(string directory) {
         ofstream createFile;
         createFile.open(directory + "/" + filename);
     }

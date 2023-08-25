@@ -28,7 +28,9 @@ using namespace std;
 // tree frog
 
 int main() {
-
+    string filename = "emptyfile";
+    FileManagement fm = FileManagement(filename);
+//    fm.fileCreator("Hello world, today we increase our c++ knowledge.");
     return 0;
 }
 

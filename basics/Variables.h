@@ -12,8 +12,11 @@ void variables() {
     bool b = true;
     string s = "Hello, Natiq";
 
+    // size_t is a data type to represent size and indices of data in memory
+    size_t t = s.find("a");
+
     // multiple declaration
-    int x = 8, t = 22, m = 41;
+    int x = 8, p = 22, m = 41;
 
     // modify variable
     d = 54.1 ;
