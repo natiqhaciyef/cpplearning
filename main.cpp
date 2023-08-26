@@ -31,6 +31,7 @@ int main() {
     string filename = "emptyfile";
     FileManagement fm = FileManagement(filename);
 //    fm.fileCreator("Hello world, today we increase our c++ knowledge.");
+    fm.updateFile2("", "world");
     return 0;
 }
 

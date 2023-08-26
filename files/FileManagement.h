@@ -11,13 +11,13 @@ using namespace std;
 
 class FileManagement {
 public:
-    string filename ;
+    string filename;
 
     FileManagement(string fn) {
         string tempFileName = fn;
         tempFileName += ".txt";
 
-        this -> filename = tempFileName;
+        this->filename = tempFileName;
     }
 
     void fileCreator(string description) {
@@ -46,33 +46,53 @@ public:
         remove(filename.c_str());
     }
 
-    void updateFile(string additionalData, string removeData) {
-        fstream myFile(filename, fstream::in | fstream::out);
-        if (!myFile.is_open()) {
-            cout << "File opening error occurred" << endl;
-        }
-
-        myFile.seekg(0, ios::beg);
-
-        string content;
-        getline(myFile, content);
-        content = "Updated: " + content + additionalData;
-
-        size_t pos = content.find(removeData);
-        if (pos == string::npos) {
-            content.replace(pos, removeData.length(), "");
-        }
-
-        myFile.seekp(0, ios::beg);
-        myFile << content;
-        myFile.close();
-    }
-
 
     void createFileInSelectedDirectory(string directory) {
         ofstream createFile;
         createFile.open(directory + "/" + filename);
     }
+
+
+    void updateFile2(string additionalData, string removeText) {
+        fstream file(filename, ios::in | ios::out); // Open in both read and write mode
+
+        if (!file) {
+            cerr << "Error opening file!" << endl;
+            return;
+        }
+
+        // Read data if needed
+        string data;
+        getline(file, data);
+
+        size_t positionToRemove = data.find(removeText);
+
+        if (positionToRemove != string::npos) {
+            data = data.replace(positionToRemove, removeText.length(), "");
+            file.seekp(0);
+        }
+
+        // Update data
+        data += additionalData;
+
+        // Close the file before truncating
+        file.close();
+
+        // Reopen the file in truncation mode
+        file.open(filename, ios::out | ios::trunc);
+
+        // Check if the file is successfully opened
+        if (!file) {
+            cerr << "Error reopening file for truncation!" << endl;
+            return;
+        }
+
+        // Write updated data
+        file << data;
+
+        // Close the file
+        file.close();
+   }
 
 };
 
