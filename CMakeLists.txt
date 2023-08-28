@@ -28,4 +28,5 @@ add_executable(cpplearning main.cpp
         oop/abstraction/Rectangle.h
         oop/abstraction/Triangle.h
         files/FileManagement.h
+        patterns/Singleton.h
 )
