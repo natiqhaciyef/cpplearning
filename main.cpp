@@ -29,8 +29,10 @@ using namespace std;
 // tree frog
 
 int main() {
-    CollectionTest ct = CollectionTest();
-    ct.arrayListTest();
+//    CollectionTest ct = CollectionTest();
+//    ct.arrayListTest();
+
+    pointerUsage();
 
     return 0;
 }

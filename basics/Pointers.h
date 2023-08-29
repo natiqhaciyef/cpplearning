@@ -29,6 +29,11 @@ void pointerUsage(){
     // pointer
     string* countryPointer = &country;
 
+    string a = *countryPointer;
+    string* b = &country;
+    cout << "Type 1: " << typeid(a).name() << endl;
+    cout << "Type 2: " << typeid(b).name() << endl;
+
     // it returns address
     cout << countryPointer << endl;
 
@@ -44,10 +49,20 @@ void pointerUsage(){
     cout << *countryPointer << endl;
 }
 
-// &data = any ;  -> data takes any's address value (copy value with address)
-// &any -> returns address of any value
-// *location = &any ; -> stores any's address in location
-// *location -> when print this returns data from location
+// Pointers are variables that store the address of another variable.
+// They are declared using the * operator, followed by the variable type.
 
+// References are aliases for existing variables.
+// They are declared using the ampersand (&) operator, followed by the variable name.
+
+// The main difference between pointers and references is that pointers can be reassigned to point to different
+// variables, while references cannot. This makes references safer to use, but also less flexible.
+
+// Feature	        Pointer	                        Reference
+// Declaration	    type* pointer_name;	            type& reference_name;
+// Dereferencing	*pointer_name;	                reference_name;
+// Reassignment	    Possible	                    Not possible
+// Safety	        Less safe	                    Safer
+// Flexibility	    More flexible                   Less flexible
 
 #endif //CPPLEARNING_POINTERS_H
