@@ -23,15 +23,15 @@
 #include "oop/abstraction/Triangle.h"
 #include "oop/abstraction/Rectangle.h"
 #include "files/FileManagement.h"
+#include "advanced/Collections.h"
 
 using namespace std;
 // tree frog
 
 int main() {
-    string filename = "emptyfile";
-    FileManagement fm = FileManagement(filename);
-//    fm.fileCreator("Hello world, today we increase our c++ knowledge.");
-    fm.updateFile2("", "world");
+    CollectionTest ct = CollectionTest();
+    ct.arrayListTest();
+
     return 0;
 }
 
