@@ -31,9 +31,11 @@ using namespace std;
 int main() {
 //    CollectionTest ct = CollectionTest();
 //    ct.arrayListTest();
+    LinkedList linkedList = LinkedList();
+    linkedList.addNode(2);
+    linkedList.addNode(7);
+    linkedList.addNode(4);
 
-    pointerUsage();
-
-    return 0;
+    linkedList.display();
 }
 
