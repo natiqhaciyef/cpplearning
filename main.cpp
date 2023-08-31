@@ -23,19 +23,21 @@
 #include "oop/abstraction/Triangle.h"
 #include "oop/abstraction/Rectangle.h"
 #include "files/FileManagement.h"
-#include "advanced/Collections.h"
+#include "advanced/Queue.h"
 
 using namespace std;
 // tree frog
 
 int main() {
-//    CollectionTest ct = CollectionTest();
-//    ct.arrayListTest();
-    LinkedList linkedList = LinkedList();
-    linkedList.addNode(2);
-    linkedList.addNode(7);
-    linkedList.addNode(4);
+    Queue que = Queue();
+    que.enqueue(30);
+    que.enqueue(40);
+    que.enqueue(50);
 
-    linkedList.display();
+    cout << que.getFront() << endl;
+    que.dequeue();
+    cout << que.getFront() << endl;
+    que.dequeue();
+    cout << que.getFront() << endl;
 }
 

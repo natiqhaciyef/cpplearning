@@ -29,5 +29,7 @@ add_executable(cpplearning main.cpp
         oop/abstraction/Triangle.h
         files/FileManagement.h
         patterns/Singleton.h
-        advanced/Collections.h
+        advanced/LinkedList.h
+        advanced/ArrayList.h
+        advanced/Queue.h
 )
