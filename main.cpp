@@ -24,20 +24,25 @@
 #include "oop/abstraction/Rectangle.h"
 #include "files/FileManagement.h"
 #include "advanced/Queue.h"
+#include "advanced/Set.h"
 
 using namespace std;
 // tree frog
 
 int main() {
-    Queue que = Queue();
-    que.enqueue(30);
-    que.enqueue(40);
-    que.enqueue(50);
+    Set set = Set();
+    set.add(45);
+    set.add(12);
+    set.add(88);
+    set.add(88);
+    set.add(71);
 
-    cout << que.getFront() << endl;
-    que.dequeue();
-    cout << que.getFront() << endl;
-    que.dequeue();
-    cout << que.getFront() << endl;
+    cout << set.getSize() << endl;
+    set.remove(12);
+    set.remove(10);
+    set.remove(88);
+
+    cout << set.getSize() << endl;
+
 }
 

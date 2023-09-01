@@ -32,4 +32,5 @@ add_executable(cpplearning main.cpp
         advanced/LinkedList.h
         advanced/ArrayList.h
         advanced/Queue.h
+        advanced/Set.h
 )
