@@ -49,6 +49,10 @@ public:
     int getSize(){
         return size;
     }
+
+    int* getAll(){
+        return array;
+    }
 };
 
 

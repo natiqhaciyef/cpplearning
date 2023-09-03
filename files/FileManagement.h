@@ -13,9 +13,9 @@ class FileManagement {
 public:
     string filename;
 
-    FileManagement(string fn) {
+    FileManagement(string fn, string extension) {
         string tempFileName = fn;
-        tempFileName += ".txt";
+        tempFileName += extension;
 
         this->filename = tempFileName;
     }
@@ -53,7 +53,7 @@ public:
     }
 
 
-    void updateFile2(string additionalData, string removeText) {
+    void updateFile(string additionalData, string removeText) {
         fstream file(filename, ios::in | ios::out); // Open in both read and write mode
 
         if (!file) {

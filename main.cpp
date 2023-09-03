@@ -25,24 +25,21 @@
 #include "files/FileManagement.h"
 #include "advanced/Queue.h"
 #include "advanced/Set.h"
+#include "creativeness/PhpInsertFileCreator.h"
 
 using namespace std;
 // tree frog
 
 int main() {
-    Set set = Set();
-    set.add(45);
-    set.add(12);
-    set.add(88);
-    set.add(88);
-    set.add(71);
+    PhpInsertFileCreator php = PhpInsertFileCreator("partner_table");
+    php.addParameter("title");
+    php.addParameter("details");
+    php.addParameter("image");
 
-    cout << set.getSize() << endl;
-    set.remove(12);
-    set.remove(10);
-    set.remove(88);
 
-    cout << set.getSize() << endl;
+    cout << php.createFile() << endl;
 
+    FileManagement fm = FileManagement("insert_post", ".php");
+    fm.fileCreator(php.createFile());
 }
 
