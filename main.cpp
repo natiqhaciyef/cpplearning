@@ -23,23 +23,34 @@
 #include "oop/abstraction/Triangle.h"
 #include "oop/abstraction/Rectangle.h"
 #include "files/FileManagement.h"
-#include "advanced/Queue.h"
-#include "advanced/Set.h"
+#include "advanced/customed/Queue.h"
+#include "advanced/customed/Set.h"
 #include "creativeness/PhpInsertFileCreator.h"
+#include "advanced/customed/Stack.h"
 
 using namespace std;
 // tree frog
 
 int main() {
-    PhpInsertFileCreator php = PhpInsertFileCreator("partner_table");
-    php.addParameter("title");
-    php.addParameter("details");
-    php.addParameter("image");
+    Stack stack = Stack();
+    stack.add(12);
+    stack.add(10);
+    stack.add(17);
+    stack.add(14);
+    stack.add(19);
+    stack.add(21);
+    stack.add(6);
+    stack.add(9);
+    stack.add(11);
+    stack.add(13);
+    stack.add(5);
+    stack.printStack();
 
+    stack.removeElement(10);
+    stack.printStack();
 
-    cout << php.createFile() << endl;
+    stack.removeElement(19);
+    stack.printStack();
 
-    FileManagement fm = FileManagement("insert_post", ".php");
-    fm.fileCreator(php.createFile());
 }
 
