@@ -35,6 +35,25 @@ public:
         array[size++] = value;
     }
 
+    void removeElement(int element) {
+        bool isContains = false;
+        int indexToRemove = -1;
+        for (int i = 0; i < size; ++i) {
+            if (array[i] == element) {
+                indexToRemove = i;
+                isContains = true;
+                break;
+            }
+        }
+
+        if (isContains && indexToRemove != -1) {
+            for (int i = indexToRemove; i < size; ++i) {
+                array[i] = array[i + 1];
+            }
+            size--;
+        }
+    }
+
     int get(int index){
         int element;
         if (index >= size || index < 0) {
@@ -52,6 +71,16 @@ public:
 
     int* getAll(){
         return array;
+    }
+
+    void printArray() {
+        cout << "Stack: [";
+        for (int i = 0; i < size; ++i) {
+            if (i != size - 1)
+                cout << array[i] << ", ";
+            else
+                cout << array[i] << "]" << endl;
+        }
     }
 };
 

@@ -46,22 +46,10 @@ public:
         }
     }
 
-    void removeElement(int element) {
-        bool isContains = false;
-        int indexToRemove = -1;
+    void remove() {
+        int* newArray = new int[size--];
         for (int i = 0; i < size; ++i) {
-            if (array[i] == element) {
-                indexToRemove = i;
-                isContains = true;
-                break;
-            }
-        }
-
-        if (isContains && indexToRemove != -1) {
-            for (int i = indexToRemove; i < size; ++i) {
-                array[i] = array[i + 1];
-            }
-            size--;
+            newArray[i] = array[i];
         }
     }
 

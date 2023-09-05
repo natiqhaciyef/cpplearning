@@ -46,10 +46,10 @@ int main() {
     stack.add(5);
     stack.printStack();
 
-    stack.removeElement(10);
+    stack.remove();
     stack.printStack();
 
-    stack.removeElement(19);
+    stack.remove();
     stack.printStack();
 
 }
