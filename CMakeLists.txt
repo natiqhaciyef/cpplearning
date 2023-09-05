@@ -35,4 +35,5 @@ add_executable(cpplearning main.cpp
         advanced/customed/Set.h
         creativeness/PhpInsertFileCreator.h
         advanced/customed/Stack.h
+        advanced/customed/Map.h
 )
