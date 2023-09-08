@@ -36,4 +36,5 @@ add_executable(cpplearning main.cpp
         creativeness/PhpInsertFileCreator.h
         advanced/customed/Stack.h
         advanced/customed/Map.h
+        advanced/classics/Generics.h
 )

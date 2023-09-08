@@ -27,30 +27,17 @@
 #include "advanced/customed/Set.h"
 #include "creativeness/PhpInsertFileCreator.h"
 #include "advanced/customed/Stack.h"
+#include "advanced/classics/Generics.h"
 
 using namespace std;
 // tree frog
 
 int main() {
-    Stack stack = Stack();
-    stack.add(12);
-    stack.add(10);
-    stack.add(17);
-    stack.add(14);
-    stack.add(19);
-    stack.add(21);
-    stack.add(6);
-    stack.add(9);
-    stack.add(11);
-    stack.add(13);
-    stack.add(5);
-    stack.printStack();
+    TemplateTest d1 = TemplateTest<int>(6);
+    TemplateTest d2 = TemplateTest<double>(11);
+    TemplateTest s1 = TemplateTest<string>("");
 
-    stack.remove();
-    stack.printStack();
-
-    stack.remove();
-    stack.printStack();
+    cout << d1.increment() << endl;
 
 }
 
