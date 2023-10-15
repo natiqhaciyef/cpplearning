@@ -33,11 +33,14 @@ using namespace std;
 // tree frog
 
 int main() {
-    TemplateTest d1 = TemplateTest<int>(6);
-    TemplateTest d2 = TemplateTest<double>(11);
-    TemplateTest s1 = TemplateTest<string>("");
+//    TemplateTest d1 = TemplateTest<int>(6);
+//    TemplateTest d2 = TemplateTest<double>(11);
+//    TemplateTest s1 = TemplateTest<string>("");
+//
+//    cout << d1.increment() << endl;
 
-    cout << d1.increment() << endl;
+    pointerUsage();
 
+    return 0;
 }
 

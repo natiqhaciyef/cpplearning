@@ -26,11 +26,11 @@ void referencesUsage(){
 void pointerUsage(){
     string country = "Canada";
 
-    // pointer
+    // pointer = reference
     string* countryPointer = &country;
 
-    string a = *countryPointer;
-    string* b = &country;
+    string a = *countryPointer;     // variable - pointer copy element
+    string* b = &country;           // pointer - reference of element
     cout << "Type 1: " << typeid(a).name() << endl;
     cout << "Type 2: " << typeid(b).name() << endl;
 
@@ -40,13 +40,16 @@ void pointerUsage(){
     // un - pointed variable
     string countryDoublePointer = *countryPointer;
 
-    // it returns string from copy
-    cout << countryDoublePointer << endl;
-
     country = "Italy";
 
-    // it returns string from address
-    cout << *countryPointer << endl;
+//    // it returns string from copy
+//    cout << countryDoublePointer << endl;
+//
+//    // it returns string from address
+//    cout << *countryPointer << endl;
+
+    cout << a << endl;
+    cout << *b << endl ;
 }
 
 // Pointers are variables that store the address of another variable.
@@ -60,7 +63,7 @@ void pointerUsage(){
 
 // Feature	        Pointer	                        Reference
 // Declaration	    type* pointer_name;	            type& reference_name;
-// Dereferencing	*pointer_name;	                reference_name;
+// De-referencing	*pointer_name;	                reference_name;
 // Reassignment	    Possible	                    Not possible
 // Safety	        Less safe	                    Safer
 // Flexibility	    More flexible                   Less flexible
